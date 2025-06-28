@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+
+        Scanner scanner = new Scanner(System.in);
+
+        float floatValue = scanner.nextFloat();   
+        int squareInput = scanner.nextInt();      
+        int base = scanner.nextInt();             
+        int power = scanner.nextInt();            
+
+        
+        int floorValue = (int) Math.floor(floatValue);
+        int ceilValue = (int) Math.ceil(floatValue);
+        int sqrtValue = (int) Math.sqrt(squareInput);
+        int powValue = (int) Math.pow(base, power);
+
+        System.out.println(floorValue);
+        System.out.println(ceilValue);
+        System.out.println(sqrtValue);
+        System.out.println(powValue);
+
+        scanner.close();
+    }
+}
+
+    
