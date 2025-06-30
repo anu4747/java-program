@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        boolean counted[] = new boolean[input.length()];
+
+        for (int i = 0; i < input.length(); i++) {
+            if (counted[i]) continue; 
+
+            char ch = input.charAt(i);
+            int count = 1;
+
+            for (int j = i + 1; j < input.length(); j++) {
+                if (input.charAt(j) == ch) {
+                    count++;
+                    counted[j] = true;  
+                }
+            }
+
+            System.out.println(ch + "   " + count);
+        }
+
+        sc.close();
+    }
+}
+
